@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default class Header extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-  };
-
-  render() {
-    return (
-      <div className="container-navbar">
-        <div className="row">
-          <h1>{this.props.name}</h1>
-        </div>
+function Header({ name }) {
+  return (
+    <div className="container-navbar">
+      <div className="row">
+        <h1>{name}</h1>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+Header.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+export default Header;
